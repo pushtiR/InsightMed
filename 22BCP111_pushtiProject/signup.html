@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - InsightMed</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #f2f4f3; color: #276d5a;">
+  <div class="auth-container">
+    <h2>Create an Account</h2>
+    <form action="signup.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+      
+      <button type="submit" class="auth-btn">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+        
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email.");
+            event.preventDefault();
+        } else if (password.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            event.preventDefault();
+        } else if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            event.preventDefault();
+        }
+    });
+    </script>
+    
+</body>
+</html>

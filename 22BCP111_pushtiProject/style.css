@@ -1,0 +1,405 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #276d5a;
+    padding: 1rem 2rem;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #F2F4F3;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  .nav-links li {
+    margin: 0 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #F2F4F3;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  /* Button Styles */
+.button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .login-btn {
+    background-color: #fff;
+    color: #276d5a;
+  }
+  
+  .signup-btn {
+    background-color: #fff;
+    color: #276d5a;
+  }
+  
+  .login-btn:hover, .signup-btn:hover {
+    background-color: #bac94a;
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  /* Hover Effects for Regular Links */
+  .nav-links a:hover:not(.button) {
+    color: #BAC94A;
+    transform: scale(1.1);
+  }
+  
+  
+  /* Hover Effects */
+  .nav-links a:hover {
+    color: #BAC94A;
+    transform: scale(1.1);
+  }
+  
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Authentication container styling */
+.auth-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Form elements */
+  .auth-container h2 {
+    color: #276d5a;
+    font-size: 1.8em;
+  }
+  
+  .auth-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-container label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  .auth-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #96d7c6;
+    border-radius: 4px;
+  }
+  
+  .auth-container .auth-btn {
+    background-color: #5AA7A7;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-container .auth-btn:hover {
+    background-color: #6C8CBF;
+  }
+  
+  /* Link Styling */
+  .auth-container a {
+    color: #5AA7A7;
+    text-decoration: none;
+  }
+  
+  .auth-container a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 3rem;
+    text-align: center;
+  }
+  
+/* Home Section Styling */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F2F4F3;  /* Background color updated */
+    padding: 5rem 2rem;
+    color: #276d5a; /* Font color updated */
+  }
+  
+  .home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .text-content {
+    max-width: 500px;
+  }
+  
+  .text-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #276d5a; /* Text color for headline */
+  }
+  
+  .text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    background-color: #276d5a;  /* Button background color updated */
+    color: #F2F4F3;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #6C8CBF;
+    color: #F2F4F3;
+    transform: scale(1.05);
+  }
+  
+  .vector-image img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  
+ /* Services Section Styling */
+ /* Remove default link styling */
+.service-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-link:hover {
+    transform: scale(1.05); /* Slight scale-up on hover */
+  }
+.services {
+    background-color: #276d5a; /* Dark background color */
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #F2F4F3; /* Light font color */
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .service-card {
+    background-color: #FFFFFF; /* Light background for contrast */
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: #276d5a; /* Darker font color for readability */
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .service-icon {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #276d5a; /* Dark color for headers in cards */
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    color: #000000; /* Accent color for description text */
+  }
+
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F2F4F3; /* Light background for the body */
+  color: #333;
+}
+
+/* AI Chat Section Styling */
+#chat {
+  background-color: #F2F4F3; /* Light background color */
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+#chat h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #276d5a; /* Dark green color for the header */
+}
+
+/* Container for chat description and image */
+.chat-description {
+  display: flex;
+  align-items: center; /* Aligns text and image vertically */
+  justify-content: space-between; /* Spaces out the content */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem; /* Added padding for better spacing */
+  background-color: #ffffff; /* White background for the description */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 1.5rem; /* Adds space between the image and text */
+}
+
+.text-content {
+  flex: 2; /* Makes the text content take more space */
+  padding-right: 2rem; /* Increases the space between text and image */
+  color: #276d5a; /* Dark green for text */
+}
+
+.text-content h2 {
+  font-size: 1.6rem; /* Increase font size for better visibility */
+  margin-bottom: 1rem;
+  color: #276d5a;
+}
+
+.text-content p {
+  font-size: 1rem; /* Larger font size for better readability */
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #000; /* Slightly lighter color for text */
+}
+
+.text-content ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.text-content li {
+  font-size: 1rem; /* Larger font size for list items */
+  margin-bottom: 8px;
+  color: #000; /* Dark color for list items */
+}
+
+/* Vector Image for AI Chat */
+.vector-image {
+  flex: 1.5; /* Makes the image take up 1.5x the space of the text */
+  max-width: 400px; /* Max width for the image */
+  text-align: center;
+}
+
+.vector-image img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: inline-block;
+}
+
+/* Button for starting the chat */
+.start-chat-btn {
+  padding: 12px 25px;
+  background-color: #276d5a; /* Dark green button */
+  color: #F2F4F3; /* Light text color */
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 50px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+}
+
+.start-chat-btn:hover {
+  background-color: #6C8CBF; /* Lighter green for hover effect */
+  color: #F2F4F3;
+  transform: scale(1.05); /* Slight scale-up on hover */
+}
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #5AA7A7;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      margin: 1rem 0;
+    }
+  
+    .menu-toggle {
+      display: inline;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  }
+  

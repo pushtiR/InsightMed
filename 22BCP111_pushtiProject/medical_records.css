@@ -1,0 +1,175 @@
+/* Reset some default styling for a fresh start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: center;
+}
+
+/* General Body Styling */
+body {
+    background-color: #f1f8f6;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Main container for medical records page */
+.record-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.record-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+.record-header {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #276d5a;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #276d5a;
+    padding-bottom: 10px;
+}
+
+/* Table Styling for records */
+/* Additional Styling for Table */
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+.records-table th, .records-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.records-table th {
+    background-color: #276d5a;
+    color: white;
+}
+
+.records-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.records-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.no-records-message {
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+/* Action Buttons Styling */
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #276d5a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #1b4d3e;
+}
+/* Additional styling for the form */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form h3 {
+    color: #276d5a;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form button {
+    background-color: #276d5a;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1b4d3e;
+}
+
+/* Success and error messages */
+.success-message {
+    color: green;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+    .record-container {
+        padding: 30px;
+    }
+
+    .record-header {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .record-table th, .record-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Hospitals</title>
+    <style>
+        /* Styling for the theme */
+        body {
+            background-color: #f2f4f3;
+            color: #276d5a;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin: 10px 0;
+            color: #276d5a;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #4a7f6e;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 1em;
+            border: 2px solid #276d5a;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: #276d5a;
+            outline: none;
+        }
+
+        input[type="text"]::placeholder {
+            color: #7da398;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #ffffff;
+            background-color: #276d5a;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #1e5a4a;
+        }
+
+        .iframe-container {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin-top: 20px;
+            border: 2px solid #276d5a;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            input[type="text"] {
+                width: 100%;
+            }
+            .iframe-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Find Nearby Hospitals</h1>
+    <p>Enter your location to find hospitals near you:</p>
+    <input type="text" id="location" placeholder="Enter city or address" />
+    <button onclick="searchHospitals()">Find Hospitals</button>
+    <button onclick="window.location.href='index.php'">Go Back</button>
+
+    <!-- Embedded Google Maps iframe -->
+    <div class="iframe-container">
+        <iframe
+            id="mapFrame"
+            width="100%"
+            height="100%"
+            style="border:0"
+            loading="lazy"
+            src="https://www.google.com/maps?q=hospitals+near+New+York&output=embed">
+        </iframe>
+    </div>
+
+    <script>
+        function searchHospitals() {
+            const location = document.getElementById("location").value;
+            const iframe = document.getElementById("mapFrame");
+            if (location) {
+                // Update iframe source with the new search location
+                iframe.src = `https://www.google.com/maps?q=hospitals+near+${encodeURIComponent(location)}&output=embed`;
+            } else {
+                alert("Please enter a location.");
+            }
+        }
+    </script>
+
+</body>
+</html>
